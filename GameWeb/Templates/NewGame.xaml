@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="GameWeb.Templates.NewGame"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameWeb.Templates"
+             mc:Ignorable="d" 
+             d:DesignHeight="714" d:DesignWidth="1592">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="49,31,0,0" TextWrapping="Wrap" Text="Название игры" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="GameName" HorizontalAlignment="Left" Height="48" Margin="49,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="417" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,175,0,0" TextWrapping="Wrap" Text="Категория игры" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <ComboBox Name="GameCategory" HorizontalAlignment="Left" Margin="49,248,0,0" VerticalAlignment="Top" Width="293" Height="57" FontSize="36" FontFamily="Segoe UI Black"/>
+        <TextBlock HorizontalAlignment="Left" Margin="49,344,0,0" TextWrapping="Wrap" Text="Категория игры" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="GameDescr" HorizontalAlignment="Left" Height="283" Margin="49,397,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="791" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="914,40,0,0" TextWrapping="Wrap" Text="Лого игры" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="GameLogo" HorizontalAlignment="Left" Height="48" Margin="914,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="417" FontSize="36" TextChanged="GameLogo_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="914,193,0,0" TextWrapping="Wrap" Text="Полное изображение игры" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="GameImage" HorizontalAlignment="Left" Height="48" Margin="914,248,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="417" FontSize="36" TextChanged="GameImage_TextChanged"/>
+        <Button x:Name="CreateGameBtn" Content="Создать игру" HorizontalAlignment="Left" Margin="1284,628,0,0" VerticalAlignment="Top" Width="276" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="36" FontFamily="Segoe UI Black" Click="CreateGameBtn_Click"/>
+        <Image x:Name="LogoImg" HorizontalAlignment="Left" Height="200" Margin="879,397,0,0" VerticalAlignment="Top" Width="200"/>
+        <Image x:Name="FullImg" HorizontalAlignment="Left" Height="200" Margin="1162,397,0,0" VerticalAlignment="Top" Width="357"/>
+
+    </Grid>
+</UserControl>

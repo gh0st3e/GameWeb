@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="GameWeb.Templates.Messages"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameWeb.Templates"
+             mc:Ignorable="d" 
+             d:DesignHeight="714" d:DesignWidth="1592">
+    <Grid>
+        <ListBox x:Name="MessagesList" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="1592" Margin="0,114,0,0">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="{Binding AvatarImg}" Width="50" Height="50"></Image>
+                        <TextBlock x:Name="GameName" Text="{Binding Path=Name}" FontFamily="Segoe UI Black" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"></TextBlock>
+                        <TextBlock  Text="Хочет добавить вас в друзья" FontFamily="Segoe UI Black" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"></TextBlock>
+
+                        <Button x:Name="AcceptFriend" FontSize="20" FontFamily="Segoe UI Black" Width="100" Click="AcceptFriend_Click" Content="{Binding Id}" Background="#FF2EFF00" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="0,0,50,0">
+                            
+                        </Button>
+                        <Button x:Name="CancelFriend" FontFamily="Segoe UI Black" FontSize="20" Width="100" Content="{Binding Id}" Click="CancelFriend_Click" Background="Red" BorderBrush="{x:Null}" Foreground="{x:Null}"></Button>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</UserControl>

@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="GameWeb.Templates.Profile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameWeb.Templates"
+             mc:Ignorable="d" 
+             d:DesignHeight="714" d:DesignWidth="1592" Background="Black">
+    <Grid>
+        <Image x:Name="UserAvatar" Source="../logo.jpg" Margin="31,36,1288,494"></Image>
+        <TextBlock x:Name="UserName" HorizontalAlignment="Left" Margin="76,225,0,0" TextWrapping="Wrap" Text="UserName" VerticalAlignment="Top" Height="60" Width="191" FontSize="35" FontFamily="Segoe UI Black" Foreground="White"/>
+        <ListBox x:Name="FriendsList" Margin="904,120,64,410" VerticalContentAlignment="Stretch" FlowDirection="LeftToRight" HorizontalContentAlignment="Center" SelectionChanged="FriendsList_SelectionChanged" >
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate >
+
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="{Binding AvatarImg}" Width="50" Height="50"></Image>
+                        <TextBlock x:Name="GameName" Text="{Binding Path=Name}" FontFamily="Segoe UI Black" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"></TextBlock>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="GamesList" Margin="76,431,64,35" SelectionChanged="GamesList_SelectionChanged">
+            <ListBox.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListBox.ItemsPanel>
+            <ListBox.ItemTemplate >
+
+                <DataTemplate>
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                        <Image Source="{Binding LogoImgPath}" Width="200" Height="200"></Image>
+                        <TextBlock x:Name="GameName" Text="{Binding Path=Name}" FontFamily="Segoe UI Black" FontSize="22" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,20,0"></TextBlock>
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBlock HorizontalAlignment="Left" Margin="904,53,0,0" TextWrapping="Wrap" Text="Друзья" VerticalAlignment="Top" FontSize="35" Foreground="White" FontFamily="Segoe UI Black" RenderTransformOrigin="0.51,1.549"/>
+        <TextBlock x:Name="DateFrom" HorizontalAlignment="Left" Margin="366,76,0,0" TextWrapping="Wrap" Text="DateFrom" VerticalAlignment="Top" FontSize="24" Foreground="White" FontFamily="Segoe UI Black"/>
+        <TextBlock x:Name="LastIn" HorizontalAlignment="Left" Margin="366,39,0,0" TextWrapping="Wrap" Text="LastDateIn" VerticalAlignment="Top" FontSize="24" Foreground="White" FontFamily="Segoe UI Black"/>
+        <TextBlock x:Name="IsOnline" HorizontalAlignment="Left" Margin="366,113,0,0" TextWrapping="Wrap" Text="Online" VerticalAlignment="Top" FontSize="24" Foreground="White" FontFamily="Segoe UI Black"/>
+        <Button x:Name="ExitAccount" Content="Выйти из аккаунта" HorizontalAlignment="Left" Margin="1275,36,0,0" VerticalAlignment="Top" Width="253" Background="{x:Null}" Foreground="White" FontFamily="Segoe UI Black" FontSize="24" BorderBrush="{x:Null}" Click="ExitAccount_Click" />
+        <Button x:Name="EditAccount"  Content="Редактировать" HorizontalAlignment="Left" Margin="70,276,0,0" VerticalAlignment="Top" Width="192" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontFamily="Segoe UI Black" Click="EditAccount_Click"/>
+        <Button x:Name="FindFriends" Content="Найти друзей" HorizontalAlignment="Left" Margin="362,222,0,0" VerticalAlignment="Top" Width="271" Click="FindFriends_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Segoe UI Black" FontSize="36"/>
+        <Button x:Name="Messages" Content="Уведомления" HorizontalAlignment="Left" Margin="364,168,0,0" VerticalAlignment="Top" Width="269" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="36" FontFamily="Segoe UI Black" Click="Messages_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="76,361,0,0" TextWrapping="Wrap" Text="Игры" VerticalAlignment="Top" FontSize="35" Foreground="White" FontFamily="Segoe UI Black" RenderTransformOrigin="0.51,1.549"/>
+        <Image x:Name="IsReqFri" HorizontalAlignment="Left" Height="52" Margin="638,168,0,0" Stretch="Fill" VerticalAlignment="Top" Width="58"/>
+        <Button x:Name="SaveAcc" Content="Защита аккаунта" HorizontalAlignment="Left" Margin="338,271,0,0" VerticalAlignment="Top" Width="330" Foreground="White" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Segoe UI Black" FontSize="36" Click="SaveAcc_Click"/>
+    </Grid>
+</UserControl>

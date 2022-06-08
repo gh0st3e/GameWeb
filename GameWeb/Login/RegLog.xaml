@@ -1,0 +1,19 @@
+﻿<Window x:Class="GameWeb.Login.RegLog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameWeb.Login"
+        mc:Ignorable="d"
+        Title="RegLog" Height="548.63" Width="644.658" WindowStartupLocation="CenterOwner">
+    <Grid HorizontalAlignment="Left" Width="635" Height="518" VerticalAlignment="Top">
+        <TextBlock x:Name="LogInUp" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Вход в аккаунт GameWeb" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="20"/>
+        <Image Source="C:\Study\Kursach_Ci_Reshetka\GameWeb\logo.jpg" HorizontalAlignment="Left" Height="100" Margin="87,63,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBlock HorizontalAlignment="Left" Margin="314,75,0,0" TextWrapping="Wrap" Text="GameWeb" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="48"/>
+        <Grid x:Name="FieldForRegLog" Margin="87,203,78,116" Width="470" Background="AliceBlue"/>
+        <Button x:Name="LogInBtn" Content="Вход" HorizontalAlignment="Left" Margin="120,407,0,0" VerticalAlignment="Top" Width="118" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Segoe UI Black" FontSize="24" Click="LogInBtn_Click"/>
+        <Button x:Name="CancelBtn" Content="Забыл пароль" HorizontalAlignment="Left" Margin="339,407,0,0" VerticalAlignment="Top" Width="205" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Segoe UI Black" FontSize="24" RenderTransformOrigin="0.311,0.616" Click="CancelBtn_Click"/>
+        <Button x:Name="NewAccountBtn" Content="У меня нет аккаунта" HorizontalAlignment="Left" Margin="156,472,0,0" VerticalAlignment="Top" Width="282" Background="{x:Null}" BorderBrush="{x:Null}" FontFamily="Segoe UI Black" FontSize="24" RenderTransformOrigin="0.311,0.616" Click="NewAccount_Click"/>
+
+    </Grid>
+</Window>

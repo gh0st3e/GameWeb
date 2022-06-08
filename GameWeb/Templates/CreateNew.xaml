@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="GameWeb.Templates.CreateNew"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameWeb.Templates"
+             mc:Ignorable="d" 
+             d:DesignHeight="714" d:DesignWidth="1592">
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="30,32,0,0" TextWrapping="Wrap" Text="Заголовок новости" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="NewsName" HorizontalAlignment="Left" Height="63" Margin="30,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="528" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="30,210,0,0" TextWrapping="Wrap" Text="Текст новости" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="NewsText" HorizontalAlignment="Left" Height="391" Margin="30,282,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="528" FontSize="36"/>
+        <TextBlock HorizontalAlignment="Left" Margin="820,32,0,0" TextWrapping="Wrap" Text="Изображение новости" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="36"/>
+        <TextBox x:Name="NewsImage" HorizontalAlignment="Left" Height="63" Margin="820,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="528" FontSize="36" TextChanged="NewsImage_TextChanged"/>
+        <Button x:Name="CreateNewsBtn" Content="Разместить новость" HorizontalAlignment="Left" Margin="1132,632,0,0" VerticalAlignment="Top" Width="405" FontFamily="Segoe UI Black" FontSize="36" Background="{x:Null}" BorderBrush="{x:Null}" Click="CreateNewsBtn_Click"/>
+        <Image x:Name="ImageEx" HorizontalAlignment="Left" Height="290" Margin="778,264,0,0" VerticalAlignment="Top" Width="626"/>
+
+    </Grid>
+</UserControl>

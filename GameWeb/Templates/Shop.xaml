@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="GameWeb.Templates.Shop"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GameWeb.Templates"
+             mc:Ignorable="d" 
+             d:DesignHeight="714" d:DesignWidth="1592">
+    <Grid>
+
+        <Grid Background="Black" Margin="399,140,0,0">
+            <Image x:Name="BackImage" Opacity="0.5" Stretch="Fill"/>
+            <TextBlock x:Name="GameDescr" Margin="47,150,251,122" FontFamily="Segoe UI Black" FontSize="36" Foreground="White" TextWrapping="Wrap"/>
+            <TextBlock x:Name="GameName" HorizontalAlignment="Left" Margin="47,30,0,0" TextWrapping="Wrap" Text="GameName" VerticalAlignment="Top" FontFamily="Segoe UI Black" Foreground="White" FontSize="72"/>
+            <Button x:Name="ByuGameBtn" Foreground="White" Content="Добавить на аккаунт" HorizontalAlignment="Left" Margin="736,457,0,0" VerticalAlignment="Top" Width="425" Height="68" FontFamily="Segoe UI Black" FontSize="36" Background="{x:Null}" BorderBrush="{x:Null}" Click="ByuGameBtn_Click" RenderTransformOrigin="0.497,0.147"/>
+            <Button Visibility="Hidden" x:Name="DelGame" Content="Удалить игру" HorizontalAlignment="Left" Margin="47,465,0,0" VerticalAlignment="Top" Width="275" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FFFF0303" FontFamily="Segoe UI Black" FontSize="36" Click="DelGame_Click"/>
+
+        </Grid>
+        <Grid Margin="0,140,1198,0">
+            <ListBox x:Name="GamesList"  SelectionChanged="GamesList_SelectionChanged" Background="{x:Null}" BorderBrush="{x:Null}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <Image Source="{Binding LogoImgPath}" Width="50" Height="50"></Image>
+                            <TextBlock x:Name="GameName" Text="{Binding Path=Name}" FontFamily="Segoe UI Black" FontSize="22" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,20,0"></TextBlock>
+
+                        </WrapPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="399,36,0,0" TextWrapping="Wrap" Text="Поиск" VerticalAlignment="Top" FontFamily="Segoe UI Black" FontSize="48"/>
+        <TextBox x:Name="FindStr" HorizontalAlignment="Left" Height="46" Margin="588,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="683" FontFamily="Segoe UI Black" FontSize="36" TextChanged="FindStr_TextChanged"/>
+        <ComboBox x:Name="Categories" HorizontalAlignment="Left" Margin="100,54,0,0" VerticalAlignment="Top" Width="214" Height="46" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Black" SelectionChanged="Categories_SelectionChanged"/>
+        <Button Visibility="Hidden" x:Name="AddNewGame" Content="Добавить игру" HorizontalAlignment="Left" Margin="1324,54,0,0" VerticalAlignment="Top" Width="191" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="24" FontFamily="Segoe UI Black" Click="AddNewGame_Click_1"/>
+    </Grid>
+</UserControl>
